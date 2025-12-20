@@ -1,7 +1,7 @@
 site_name: 'Data Engineering Knowledge Base'
 site_description: 'Личная база знаний и проекты Data Engineer'
 site_author: 'Твоё Имя'
-site_url: 'https://username.github.io/knowledge-base/'
+site_url: 'https://dehandbook.ru/'
 
 # 📘 Тема
 theme:
