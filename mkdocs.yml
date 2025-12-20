@@ -1,0 +1,103 @@
+site_name: 'Data Engineering Knowledge Base'
+site_description: 'Личная база знаний и проекты Data Engineer'
+site_author: 'Твоё Имя'
+site_url: 'https://username.github.io/knowledge-base/'
+
+# 📘 Тема
+theme:
+  name: 'material'
+  language: 'ru'
+  features:
+    - navigation.expand
+    - navigation.sections
+    - navigation.tabs
+    - navigation.top
+    - toc.integrate
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: blue
+      accent: indigo
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: blue
+      accent: indigo
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+# 📁 Навигация
+nav:
+  - Главная: index.md
+  - Обо мне: about.md
+  - Проекты: projects.md
+  - База знаний:
+      - Python:
+          - Основы: knowledge/python/basics.md
+          - Pandas: knowledge/python/pandas.md
+          - PySpark: knowledge/python/pyspark.md
+      - SQL:
+          - Основы: knowledge/sql/basics.md
+          - Оптимизация: knowledge/sql/optimization.md
+      - Airflow:
+          - DAG-и: knowledge/airflow/dags.md
+          - Практики: knowledge/airflow/practices.md
+      - Инфраструктура:
+          - Docker: knowledge/devops/docker.md
+          - CI/CD: knowledge/devops/cicd.md
+  - Курсы и обучение:
+      - Python курс: courses/python_course.md
+      - Stepik ML: courses/stepik_ml.md
+      - LeetCode заметки: courses/leetcode_notes.md
+  - Заметки:
+      - Разное: notes/random.md
+      - Архитектура данных: notes/architecture.md
+  - Развитие: progress.md
+  - Контакты: contacts.md
+
+# 🧩 Расширения Markdown
+markdown_extensions:
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.details
+  - pymdownx.emoji
+
+# 🔍 Плагины
+plugins:
+  - search
+  - tags
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - awesome-pages
+
+# 📄 Дополнительно
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/username
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/username
+  generator: false

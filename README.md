@@ -1,2 +1,4 @@
 # my_site_dehandbook
-Это репозиторий для моего сайта - базы знаний
+
+Исходный код сайта https://dehandbook.ru
+Сайт собран на MkDocs и размещен на GitHub Pages
