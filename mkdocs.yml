@@ -51,7 +51,7 @@ nav:
           - CI/CD: knowledge/devops/cicd.md
   - Курсы и обучение:
       - Python курс: courses/python_course.md
-      - Stepik ML: courses/stepik_ml.md
+      - Stepik ML: courses/stepik.md
       - LeetCode заметки: courses/leetcode_notes.md
   - Заметки:
       - Разное: notes/airflow.md
@@ -97,7 +97,7 @@ plugins:
 extra:
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/username
+      link: https://github.com/TheDataWanderer
     - icon: fontawesome/brands/linkedin
-      link: https://linkedin.com/in/username
+      link: https://linkedin.com/in/nefatov/
   generator: false
