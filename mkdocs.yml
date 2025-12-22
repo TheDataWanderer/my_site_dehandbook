@@ -54,7 +54,7 @@ nav:
       - Stepik ML: courses/stepik_ml.md
       - LeetCode заметки: courses/leetcode_notes.md
   - Заметки:
-      - Разное: notes/random.md
+      - Разное: notes/airflow.md
       - Архитектура данных: notes/architecture.md
   - Развитие: progress.md
   - Контакты: contacts.md
