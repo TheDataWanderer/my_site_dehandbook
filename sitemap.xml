@@ -1,51 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://username.github.io/knowledge-base/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/about/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/about/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/progress/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/progress/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/projects/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/projects/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/courses/leetcode_notes/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/courses/leetcode_notes/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/courses/python_course/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/courses/python_course/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/courses/stepic_ml/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/courses/stepic_ml/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/knowleddge/python/pandas/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/knowleddge/python/basics/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/knowleddge/python/tips/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/knowleddge/python/pandas/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/notes/airflow/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/knowleddge/python/tips/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/notes/python/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/notes/airflow/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
     <url>
-         <loc>https://username.github.io/knowledge-base/notes/sql/</loc>
-         <lastmod>2025-12-20</lastmod>
+         <loc>https://dehandbook.ru/notes/python/</loc>
+         <lastmod>2025-12-22</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/notes/sql/</loc>
+         <lastmod>2025-12-22</lastmod>
     </url>
 </urlset>
