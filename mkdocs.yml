@@ -13,6 +13,8 @@ theme:
     - navigation.sections
     - navigation.tabs
     - navigation.top
+    - navigation.path
+    - navigation.indexes
     - toc.integrate
     - search.highlight
     - search.suggest
@@ -37,20 +39,31 @@ nav:
   - Обо мне: about.md
   - Проекты: projects.md
   - База знаний:
+      - Обзор: knowledge/index.md
       - Python:
-          - Основы: knowledge/python/basics.md
-          - Pandas: knowledge/python/pandas.md
-          - Советы: knowledge/python/tips.md
-      - SQL:
-          - Основы: notes/sql.md
+          - Основы: knowledge/python/index.md
+      - PostgreSQL:
+          - Обзор: knowledge/postgresql/index.md
+          - Основы: knowledge/postgresql/basics.md
+          - Оптимизация: knowledge/postgresql/optimization.md
+          - Оконные функции: knowledge/postgresql/window_functions.md
       - Airflow:
-          - Заметки: notes/airflow.md
+          - Обзор: knowledge/airflow/index.md
+      - DWH:
+          - Обзор: knowledge/dwh/index.md
+      - Linux:
+          - Обзор: knowledge/linux/index.md
+      - Git:
+          - Обзор: knowledge/git/index.md
+      - Obsidian:
+          - Обзор: knowledge/obsidian/index.md
+      - Заметки: knowledge/notes/index.md
   - Мои курсы:
       - Обзор: courses/index.md
       - Excel для менеджеров: courses/excel/index.md
       - PostgreSQL: courses/postgresql/index.md
   - Медиа: media.md
-  - Ресурсы по DE: resources.md
+  - Полезные ресурсы: resources.md
 
 # 🧩 Расширения Markdown
 markdown_extensions:
