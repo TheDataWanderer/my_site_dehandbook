@@ -45,14 +45,10 @@ nav:
       - Airflow:
           - Заметки: notes/airflow.md
   - Мои курсы:
-      - MS Excel: courses/excel_courses.md
-      - PostgreSQL: courses/postgresql_courses.md
-  - Заметки:
-      - Python: notes/python.md
-      - Airflow: notes/airflow.md
-      - SQL: notes/sql.md
-  - Медиа: contacts.md
-  - Полезные ресурсы: useful_resources.md
+      - Excel для менеджеров: courses/excel/index.md
+      - PostgreSQL: courses/postgresql/index.md
+  - Медиа: media.md
+  - Ресурсы по DE: resources.md
 
 # 🧩 Расширения Markdown
 markdown_extensions:

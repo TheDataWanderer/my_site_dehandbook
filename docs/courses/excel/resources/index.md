@@ -1,0 +1,2 @@
+- [Шорткаты для Excel](shortcuts.md)
+- [Полезные ресурсы по Excel](useful_links.md)
