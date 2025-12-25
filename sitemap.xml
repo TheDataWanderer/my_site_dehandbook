@@ -73,6 +73,54 @@
          <lastmod>2025-12-25</lastmod>
     </url>
     <url>
+         <loc>https://dehandbook.ru/knowledge/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/airflow/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/dwh/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/git/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/linux/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/notes/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/notes/airflow/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/notes/python/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/notes/sql/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/obsidian/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/postgresql/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
+         <loc>https://dehandbook.ru/knowledge/python/</loc>
+         <lastmod>2025-12-25</lastmod>
+    </url>
+    <url>
          <loc>https://dehandbook.ru/knowledge/python/basics/</loc>
          <lastmod>2025-12-25</lastmod>
     </url>
@@ -85,15 +133,7 @@
          <lastmod>2025-12-25</lastmod>
     </url>
     <url>
-         <loc>https://dehandbook.ru/notes/airflow/</loc>
-         <lastmod>2025-12-25</lastmod>
-    </url>
-    <url>
-         <loc>https://dehandbook.ru/notes/python/</loc>
-         <lastmod>2025-12-25</lastmod>
-    </url>
-    <url>
-         <loc>https://dehandbook.ru/notes/sql/</loc>
+         <loc>https://dehandbook.ru/knowledge/spark/</loc>
          <lastmod>2025-12-25</lastmod>
     </url>
 </urlset>
