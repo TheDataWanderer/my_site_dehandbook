@@ -45,6 +45,7 @@ nav:
       - Airflow:
           - Заметки: notes/airflow.md
   - Мои курсы:
+      - Обзор: courses/index.md
       - Excel для менеджеров: courses/excel/index.md
       - PostgreSQL: courses/postgresql/index.md
   - Медиа: media.md
