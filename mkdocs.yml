@@ -48,12 +48,12 @@ nav:
           - Обзор: knowledge/git/index.md
       - Linux:
           - Обзор: knowledge/linux/index.md
-      - Obsidian:
-          - Обзор: knowledge/obsidian/index.md
       - PostgreSQL:
           - Обзор: knowledge/postgresql/index.md
       - Python:
           - Основы: knowledge/python/index.md
+      - Obsidian:
+          - Обзор: knowledge/obsidian/index.md
       - Заметки: knowledge/notes/index.md
   - Мои курсы:
       - Обзор: courses/index.md
