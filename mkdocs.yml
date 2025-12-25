@@ -44,15 +44,13 @@ nav:
           - Основы: notes/sql.md
       - Airflow:
           - Заметки: notes/airflow.md
-  - Курсы и обучение:
-      - Python курс: courses/python_courses.md
-      - Stepik ML: courses/stepik.md
-      - LeetCode заметки: courses/leetcode_notes.md
+  - Мои курсы:
+      - MS Excel: courses/excel_courses.md
+      - PostgreSQL: courses/postgresql_courses.md
   - Заметки:
       - Python: notes/python.md
       - Airflow: notes/airflow.md
       - SQL: notes/sql.md
-  - Развитие: progress.md
   - Медиа: contacts.md
   - Полезные ресурсы: useful_resources.md
 
