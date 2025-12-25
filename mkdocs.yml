@@ -37,15 +37,15 @@ nav:
   - Проекты: projects.md
   - База знаний:
       - Python:
-          - Основы: knowleddge/python/basics.md
-          - Pandas: knowleddge/python/pandas.md
-          - Советы: knowleddge/python/tips.md
+          - Основы: knowledge/python/basics.md
+          - Pandas: knowledge/python/pandas.md
+          - Советы: knowledge/python/tips.md
       - SQL:
           - Основы: notes/sql.md
       - Airflow:
           - Заметки: notes/airflow.md
   - Курсы и обучение:
-      - Python курс: courses/python_course.md
+      - Python курс: courses/python_courses.md
       - Stepik ML: courses/stepik.md
       - LeetCode заметки: courses/leetcode_notes.md
   - Заметки:

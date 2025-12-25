@@ -1,6 +1,3 @@
-## Полезные ресурсы
-
-
 ## SQL
 - [PostgreSQL Documentation](https://postgrespro.ru/docs/) — Полное руководство по всем возможностям PostgreSQL.
 - [PostgreSQL Wiki](https://wiki.postgresql.org/wiki/Main_Page/ru) — Вики-сайт с дополнительными материалами и руководствами.
