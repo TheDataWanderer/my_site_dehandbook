@@ -8,6 +8,7 @@
 
 ---
 ## Основные разделы
+---
 
 ### Apache Airflow ➡️ [Перейти](airflow/index.md)
 ---
