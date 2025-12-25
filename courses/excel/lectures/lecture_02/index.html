@@ -1,0 +1,1472 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Личная база знаний и проекты Data Engineer">
+      
+      
+        <meta name="author" content="Максим">
+      
+      
+        <link rel="canonical" href="https://dehandbook.ru/courses/excel/lectures/lecture_02/">
+      
+      
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
+    
+    
+      
+        <title>Lecture 02 - Data Engineering Knowledge Base</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../../.." title="Data Engineering Knowledge Base" class="md-header__button md-logo" aria-label="Data Engineering Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Data Engineering Knowledge Base
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Lecture 02
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Главная
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../about/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Обо мне
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../projects/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Проекты
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../knowledge/python/basics/" class="md-tabs__link">
+          
+  
+  
+  База знаний
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../" class="md-tabs__link">
+          
+  
+  
+  Мои курсы
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../media/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Медиа
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../resources/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  Ресурсы по DE
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Data Engineering Knowledge Base" class="md-nav__button md-logo" aria-label="Data Engineering Knowledge Base" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Data Engineering Knowledge Base
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Обо мне
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../projects/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Проекты
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    База знаний
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    База знаний
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Python
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Python
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../knowledge/python/basics/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Основы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../knowledge/python/pandas/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Pandas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../knowledge/python/tips/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Советы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    SQL
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    SQL
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../notes/sql/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Основы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_3" id="__nav_4_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Airflow
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Airflow
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../notes/airflow/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Заметки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Мои курсы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Мои курсы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Excel для менеджеров
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../postgresql/index.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    PostgreSQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../media/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Медиа
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../resources/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ресурсы по DE
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h2 id="_1">Оглавление<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#сводные-таблицы">Сводные таблицы</a><ul>
+<li><a href="#1-подготовка-данных-для-сводной-таблицы">1. Подготовка данных для сводной таблицы</a></li>
+<li><a href="#2-создание-сводной-таблицы">2. Создание сводной таблицы</a><ul>
+<li><a href="#21-создание-сводной-таблицы-на-основе-обычных-данных">2.1 Создание сводной таблицы на основе обычных данных</a></li>
+<li><a href="#22-создание-сводной-таблицы-на-основе-смарт-таблицы">2.2 Создание сводной таблицы на основе смарт-таблицы</a></li>
+</ul>
+</li>
+<li><a href="#3-наполнение-сводной-таблицы">3. Наполнение сводной таблицы</a></li>
+<li><a href="#4-работа-с-фильтрами-срезами-и-группировками">4. Работа с фильтрами, срезами и группировками</a><ul>
+<li><a href="#41-фильтрация-данных">4.1 Фильтрация данных</a></li>
+<li><a href="#42-срезы">4.2 Срезы</a></li>
+<li><a href="#43-группировка-данных">4.3 Группировка данных</a></li>
+</ul>
+</li>
+<li><a href="#5-вычисляемые-поля-и-элементы">5. Вычисляемые поля и элементы</a></li>
+<li><a href="#6-применение-условного-форматирования">6. Применение условного форматирования</a></li>
+</ul>
+</li>
+<li><a href="#графики-и-диаграммы-на-основе-сводной-таблицы">Графики и диаграммы на основе сводной таблицы</a><ul>
+<li><a href="#7-создание-диаграммы-из-сводной-таблицы">7. Создание диаграммы из сводной таблицы</a><ul>
+<li><a href="#71-выбор-данных-для-диаграммы">7.1 Выбор данных для диаграммы</a></li>
+<li><a href="#72-настройка-диаграммы">7.2 Настройка диаграммы</a></li>
+</ul>
+</li>
+<li><a href="#8-настройка-интерактивности-диаграммы">8. Настройка интерактивности диаграммы</a><ul>
+<li><a href="#81-добавление-среза">8.1 Добавление среза</a></li>
+<li><a href="#82-добавление-фильтра">8.2 Добавление фильтра</a></li>
+</ul>
+</li>
+<li><a href="#9-нюансы-создания-и-стилистического-оформления-графиков-в-excel">9. Нюансы создания и стилистического оформления графиков в Excel</a><ul>
+<li><a href="#91-сохранение-отформатированного-графика-как-шаблона">9.1 Сохранение отформатированного графика как шаблона</a></li>
+<li><a href="#92-стилистическое-форматирование-графика">9.2 Стилистическое форматирование графика</a></li>
+<li><a href="#93-пример-правильного-оформления-графика">9.3 Пример правильного оформления графика</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#создание-дашборда-в-excel-как-связать-графики-и-срезы-на-одном-листе">Создание дашборда в Excel: как связать графики и срезы на одном листе</a></li>
+</ul>
+<h1 id="_2">Сводные таблицы<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p><strong>_Сводная таблица - мощный инструмент Excel для быстрого анализа больших объемов данных</strong>. Она позволяет агрегировать, группировать и фильтровать информацию без сложных формул._</p>
+<h2 id="1">1. Подготовка данных для сводной таблицы<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
+<p>Прежде чем создавать сводную таблицу, важно убедиться, что данные подготовлены правильно. Независимо от того, какой способ создания сводной таблицы вы выбираете, данные должны быть структурированы в виде таблицы.</p>
+<ul>
+<li><strong>Отсутствие пустых строк и столбцов</strong> - это важно для корректной работы сводной таблицы.</li>
+<li><strong>Правильные заголовки</strong> - каждая колонка должна иметь четкие заголовки.</li>
+<li><strong>Типы данных</strong> - данные в столбцах должны быть одного типа (например, текст, дата, число).</li>
+</ul>
+<h2 id="2">2. Создание сводной таблицы<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
+<p>Теперь, когда данные подготовлены, рассмотрим два способа создания сводной таблицы: на основе обычных данных и на основе смарт-таблицы (умной таблицы).</p>
+<h3 id="21">2.1 Создание сводной таблицы на основе обычных данных<a class="headerlink" href="#21" title="Permanent link">&para;</a></h3>
+<ol>
+<li>Выделите диапазон данных (включая заголовки).</li>
+<li>Перейдите в <strong>Вставка → Сводная таблица</strong>.    </li>
+<li>В открывшемся окне выберите:    <ul>
+<li><strong>Диапазон</strong> - Excel автоматически подставит выделенный диапазон.        </li>
+<li><strong>Новый лист</strong> или <strong>Существующий лист</strong> - выберите, где будет располагаться сводная таблица.        </li>
+</ul>
+</li>
+<li>Нажмите <strong>ОК</strong>.</li>
+</ol>
+<h3 id="22-">2.2 Создание сводной таблицы на основе смарт-таблицы<a class="headerlink" href="#22-" title="Permanent link">&para;</a></h3>
+<p>Смарт-таблица (или «умная таблица») - это инструмент, который позволяет автоматически обновлять данные, добавлять новые строки и столбцы, а также упрощает работу с данными.</p>
+<ol>
+<li>Для начала нужно преобразовать обычный диапазон данных в смарт-таблицу:    <ul>
+<li>Выделите диапазон данных.        </li>
+<li>Перейдите в <strong>Главная → Форматировать как таблицу</strong>.        </li>
+<li>Выберите стиль оформления и убедитесь, что установлен флажок <strong>Таблица с заголовками</strong>.        </li>
+<li>Нажмите <strong>ОК</strong>.        </li>
+</ul>
+</li>
+<li>После этого создайте сводную таблицу так же, как для обычного диапазона, но теперь Excel будет работать с динамически обновляемой таблицей, что особенно удобно, если вы регулярно добавляете новые строки или столбцы.</li>
+</ol>
+<h2 id="3">3. Наполнение сводной таблицы<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
+<p>Когда сводная таблица создана, необходимо определить, какие данные будут в строках, столбцах, значениях и фильтрах.</p>
+<h3 id="_3">Основные области сводной таблицы:<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Строки</strong> - сюда перетаскиваются элементы, по которым вы хотите сгруппировать данные (например, по продукту или региону).    </li>
+<li><strong>Столбцы</strong> - используются для дополнительного разделения данных (например, по менеджеру или дате).    </li>
+<li><strong>Значения</strong> - сюда перетаскиваются числовые данные, которые будут суммироваться или подсчитываться (например, сумма продаж).    </li>
+<li><strong>Фильтры</strong> - позволяют фильтровать данные по выбранным критериям (например, по менеджеру или региону). </li>
+</ul>
+<p>Теперь сводная таблица будет показывать суммарные продажи по каждому продукту в разрезе по регионам.</p>
+<h2 id="4">4. Работа с фильтрами, срезами и группировками<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
+<h3 id="41">4.1 Фильтрация данных<a class="headerlink" href="#41" title="Permanent link">&para;</a></h3>
+<p>С помощью фильтров вы можете ограничить вывод данных по определенным критериям. Например, если вы хотите посмотреть продажи только по одному региону или по одному менеджеру.</p>
+<ul>
+<li>Перетащите нужный критерий в область <strong>Фильтры</strong>.    </li>
+<li>В сводной таблице появится выпадающий список, который позволит выбрать нужные данные.</li>
+</ul>
+<h3 id="42">4.2 Срезы<a class="headerlink" href="#42" title="Permanent link">&para;</a></h3>
+<p>Срезы - это визуальные элементы для фильтрации данных, которые позволяют легко выбирать и отображать информацию по определённым критериям.</p>
+<ol>
+<li>Чтобы добавить срез, перейдите в <strong>Анализ → Вставить срез</strong>.    </li>
+<li>Выберите поле, по которому хотите фильтровать данные (например, "Регион" или "Менеджер").    </li>
+<li>Срез будет отображаться на листе, и вы сможете выбирать нужные значения прямо в этом срезе. Это позволяет быстро переключаться между фильтрами без необходимости вручную открывать выпадающие списки.    </li>
+</ol>
+<p><strong>Преимущества срезов:</strong></p>
+<ul>
+<li><strong>Интерактивность</strong>: срезы легко использовать, они предоставляют визуальную информацию о текущем состоянии фильтрации.    </li>
+<li><strong>Удобство</strong>: срезы позволяют одновременно фильтровать данные по нескольким критериям и видеть результаты в реальном времени.    </li>
+<li><strong>Группировка</strong>: можно добавлять несколько срезов на один отчет для фильтрации по разным категориям, например, по региону и по менеджеру одновременно.</li>
+</ul>
+<h3 id="43">4.3 Группировка данных<a class="headerlink" href="#43" title="Permanent link">&para;</a></h3>
+<p>Сводные таблицы позволяют группировать данные по датам, числам и тексту.</p>
+<ul>
+<li><strong>Группировка по датам</strong>: если в данных есть столбец с датами, можно сгруппировать их по месяцам, кварталам или годам. Для этого:    <ol>
+<li>Щелкните правой кнопкой по ячейке с датой в сводной таблице.        </li>
+<li>Выберите <strong>Группировать</strong> и выберите нужный период (например, месяц или год).        </li>
+</ol>
+</li>
+<li><strong>Группировка по числам</strong>: если у вас есть числовые данные, например, сумма продаж, можно сгруппировать их по диапазонам (например, от 0 до 1000, от 1000 до 5000 и так далее). Для этого:    <ol>
+<li>Щелкните правой кнопкой по числовому значению в сводной таблице.        </li>
+<li>Выберите <strong>Группировать</strong> и укажите диапазоны.        </li>
+</ol>
+</li>
+<li><strong>Группировка по текстовым данным</strong>: если у вас есть текстовые данные, такие как категории товаров или менеджеры, вы можете сгруппировать их для анализа.</li>
+</ul>
+<h2 id="5">5. Вычисляемые поля и элементы<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
+<p>В сводной таблице можно добавить вычисляемые поля, которые рассчитываются на основе существующих данных. Это полезно, когда нужно создать дополнительные метрики или показатели.</p>
+<h3 id="_4">Пример:<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>Предположим, у нас есть данные о продажах и расходах, и нужно вычислить прибыль. Для этого:
+1. Щелкните по сводной таблице.  <br />
+2. Перейдите в <strong>Анализ сводной таблицы</strong> → <strong>Поля, элементы и наборы</strong>.  <br />
+3. Введите название нового поля (например, <strong>Прибыль</strong>) и формулу, например, <strong>Сумма продаж - Сумма расходов</strong>.
+После этого в сводной таблице появится новое поле для вычисления прибыли.</p>
+<h2 id="6">6. Применение условного форматирования<a class="headerlink" href="#6" title="Permanent link">&para;</a></h2>
+<p>Условное форматирование позволяет выделять данные, соответствующие определенным условиям. Это помогает легче воспринимать информацию
+1. Выберите ячейки, которые хотите отформатировать.  <br />
+2. Перейдите в <strong>Главная → Условное форматирование</strong>.  <br />
+3. Выберите нужное правило (например, выделение значений больше определенного числа или использование цветовых шкал).   </p>
+<p>Это полезно для выделения ключевых данных, таких как например наибольшие или наименьшие значения.</p>
+<h1 id="_5">Графики и диаграммы на основе сводной таблицы<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h1>
+<h3 id="7">7. Создание диаграммы из сводной таблицы<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<p><em>Теперь, когда сводная таблица готова, можно создать на её основе график или диаграмму. 
+Создание визуализации на основе сводных таблиц помогает наглядно представить данные и выявить ключевые тренды. Визуализация позволяет лучше понять, какие факторы влияют на результаты, а интерактивность срезов и фильтров даёт возможность быстро изменять представление данных в зависимости от нужд анализа.</em></p>
+<h4 id="71">7.1. Выбор данных для диаграммы:<a class="headerlink" href="#71" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Выделите всю сводную таблицу или конкретные данные, которые хотите отобразить на графике (например, продажи по регионам).    </li>
+<li>Перейдите в меню <strong>Вставка → Диаграммы</strong>.    </li>
+<li>В открывшемся меню выберите тип диаграммы, который наилучшим образом подойдет для ваших данных.    </li>
+</ol>
+<p><strong>Типы диаграмм:</strong></p>
+<ul>
+<li><strong>Гистограмма</strong> (или столбчатая диаграмма): хорошо подходит для сравнения числовых значений по категориям (например, продажи по регионам).    </li>
+<li><strong>Линейный график</strong>: помогает показать изменения данных с течением времени, например, изменения продаж по месяцам.    </li>
+<li><strong>Круговая диаграмма</strong>: используется для отображения долей от общего (например, доля каждого региона в общих продажах).    </li>
+<li><strong>Комбинированная диаграмма</strong>: позволяет на одном графике сочетать, например, столбцы и линию (например, продажи и тренд). </li>
+</ul>
+<h4 id="72">7.2. Настройка диаграммы:<a class="headerlink" href="#72" title="Permanent link">&para;</a></h4>
+<ol>
+<li>После вставки диаграммы, на панели инструментов появится меню <strong>Конструктор диаграмм</strong>, где можно настроить её вид.    </li>
+<li>Настройте:    <ul>
+<li><strong>Название диаграммы</strong>: кликните по заголовку и введите понятное описание (например, «Продажи по регионам»).        </li>
+<li><strong>Оси</strong>: настройте оси, чтобы они корректно отображали данные (например, ось X - регионы, ось Y - продажи).        </li>
+<li><strong>Легенда</strong>: добавьте или настройте легенду, чтобы пользователи могли легко понять, что обозначают различные цвета и линии.        </li>
+<li><strong>Цвета и стиль</strong>: выберите подходящий стиль оформления диаграммы для лучшего восприятия данных.</li>
+</ul>
+</li>
+</ol>
+<h3 id="8">8. Настройка интерактивности диаграммы<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<p><em>Чтобы сделать вашу визуализацию еще более полезной, можно добавить интерактивность с помощью <strong>срезов</strong> или <strong>фильтров</strong>.</em></p>
+<h4 id="81">8.1. Добавление среза:<a class="headerlink" href="#81" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Для фильтрации данных на диаграмме добавьте срез. Срез - это визуальный элемент, который позволяет фильтровать данные на диаграмме по одному или нескольким критериям (например, по регионам или категориям товаров).    </li>
+<li>Перейдите в <strong>Анализ → Вставить срез</strong>.    </li>
+<li>Выберите поле, по которому хотите фильтровать данные (например, «Регион» или «Менеджер»).    </li>
+<li>Срез будет отображаться рядом с диаграммой, и вы сможете выбрать нужные значения для отображения на графике.</li>
+</ol>
+<h4 id="82">8.2. Добавление фильтра:<a class="headerlink" href="#82" title="Permanent link">&para;</a></h4>
+<ol>
+<li>Добавьте фильтр, чтобы показывать только данные, соответствующие определенным критериям (например, показывать только данные за последние 6 месяцев).    </li>
+<li>Для этого просто используйте функцию фильтрации в сводной таблице, и диаграмма автоматически обновится.</li>
+</ol>
+<h3 id="_6">Пример: Построение графика продаж по регионам с помощью сводной таблицы<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>Предположим, у вас есть сводная таблица с данными о продажах по регионам за разные месяцы. Чтобы построить график:
+1. Выделите данные сводной таблицы, например, <strong>Месяц</strong> и <strong>Продажи</strong>.  <br />
+2. Перейдите в <strong>Вставка → Диаграмма → Линейная диаграмма</strong> (или <strong>Столбчатая диаграмма</strong>). <br />
+3. Диаграмма автоматически отобразит продажи по месяцам.  <br />
+4. Настройте оси: на оси X - месяцы, на оси Y - суммы продаж.  <br />
+5. При необходимости добавьте <strong>срезы</strong> для фильтрации по регионам или <strong>динамические элементы</strong> для отображения трендов.</p>
+<h3 id="9-excel">9. Нюансы создания и стилистического оформления графиков в Excel<a class="headerlink" href="#9-excel" title="Permanent link">&para;</a></h3>
+<p>Когда вы создаете график на основе сводной таблицы или других данных в Excel, очень важно сделать его не только функциональным, но и визуально привлекательным. График должен четко доносить основную информацию, быть простым для восприятия и не перегружать зрителя лишними элементами. Рассмотрим ключевые моменты и нюансы для правильного стилистического оформления графиков.</p>
+<h3 id="91">9.1. Сохранение отформатированного графика как шаблона<a class="headerlink" href="#91" title="Permanent link">&para;</a></h3>
+<p>Если вам нужно регулярно использовать один и тот же формат графиков, можно сохранить настройки оформления как шаблон, чтобы не тратить время на их повторное создание.</p>
+<ol>
+<li><strong>Создание графика</strong>: Постройте график, настроив его стили и элементы.    </li>
+<li><strong>Форматирование графика</strong>: Сделайте все необходимые изменения:    <ul>
+<li>Измените тип диаграммы, если нужно.        </li>
+<li>Настройте цвета, шрифты и расположение элементов (например, легенду, метки данных, оси).        </li>
+</ul>
+</li>
+<li><strong>Сохранение шаблона</strong>:    <ul>
+<li>Щелкните правой кнопкой мыши на график и выберите <strong>Сохранить как шаблон</strong>.        </li>
+<li>Дайте имя шаблону и сохраните его в папку, которую Excel использует для шаблонов графиков.        </li>
+</ul>
+</li>
+<li><strong>Применение шаблона</strong>:    <ul>
+<li>Для использования сохраненного шаблона выберите данные и перейдите в <strong>Вставка → Диаграмма → Выбрать шаблон</strong>.        </li>
+<li>В открывшемся окне выберите нужный шаблон, и график будет автоматически отформатирован в соответствии с вашим стилем.</li>
+</ul>
+</li>
+</ol>
+<h3 id="92">9.2. Стилистическое форматирование графика<a class="headerlink" href="#92" title="Permanent link">&para;</a></h3>
+<p>Правильное оформление графика важно для того, чтобы он был не только понятным, но и приятным для восприятия. Вот несколько важных моментов для настройки.</p>
+<h4 id="1_1">1. Уберите лишние элементы<a class="headerlink" href="#1_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li>
+<p><strong>Убираем 3D-эффекты</strong>: Графики в 3D часто создают лишнюю путаницу, особенно когда нужно сосредоточиться на числовых данных. Используйте <strong>плоские (2D)</strong> графики, так как они дают более четкое представление о данных.</p>
+</li>
+<li>
+<p><strong>Отключите сетку</strong>: Сетка может запутать, особенно если она слишком яркая или слишком плотная. Чтобы убрать сетку:    </p>
+<ul>
+<li>Кликните правой кнопкой по области диаграммы и выберите <strong>Формат области диаграммы</strong>.        </li>
+<li>Перейдите в раздел <strong>Сетка</strong> и уберите ненужные элементы.        </li>
+</ul>
+</li>
+<li><strong>Удалите кнопки и ненужные элементы</strong>: Кнопки масштабирования, сетка, лишние линии или области - все это отвлекает внимание от данных. Уберите ненужные кнопки, такие как <strong>Слайдеры</strong> или <strong>Таймлайны</strong>, если они не имеют функционального значения для отображаемого графика.</li>
+</ul>
+<h4 id="2_1">2. Позиционирование легенды<a class="headerlink" href="#2_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Легенда</strong>: Легенда помогает пользователю понять, что означают различные цвета и линии на графике. Однако она не должна быть слишком навязчивой.    <ul>
+<li><strong>Рекомендуемое место для легенды</strong>: лучше всего разместить легенду <strong>в верхней части графика</strong>, чтобы она не перекрывала важные данные. Можно выбрать вариант <strong>в верхнем центре</strong> или <strong>в правом верхнем углу</strong> в зависимости от того, где график не загромождается.        </li>
+<li>Чтобы переместить легенду, просто кликните по ней и перетащите в нужное место.</li>
+</ul>
+</li>
+</ul>
+<h4 id="3_1">3. Добавление меток данных<a class="headerlink" href="#3_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Метки данных</strong>: Иногда важно видеть точные значения рядом с точками данных, чтобы облегчить восприятие графика.    <ul>
+<li>Для этого выделите график, затем перейдите в <strong>Конструктор диаграмм</strong> или <strong>Форматировать</strong>, и выберите <strong>Метки данных</strong>.        </li>
+<li>Можете выбрать, чтобы значения отображались на графике <strong>внутри или снаружи столбцов/линий</strong>.</li>
+</ul>
+</li>
+</ul>
+<h4 id="4_1">4. Заголовок графика<a class="headerlink" href="#4_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Заголовок</strong>: График должен иметь ясный, лаконичный заголовок, который объясняет, что на нем изображено. Лучше избегать многословных названий.    <ul>
+<li>Пример: «Продажи по регионам за 2024 год» будет гораздо более информативным, чем «Сравнительный анализ продаж по регионам».        </li>
+<li>Заголовок должен быть <strong>крупным и читаемым</strong>, но не отвлекающим от данных.</li>
+</ul>
+</li>
+</ul>
+<h4 id="5_1">5. Цвета и шрифты<a class="headerlink" href="#5_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Цвета</strong>: Оставьте палитру с несколькими нейтральными цветами. Яркие цвета лучше использовать для выделения ключевых точек или трендов.    <ul>
+<li><strong>Используйте контрастные цвета</strong>, но избегайте пестрых и раздражающих оттенков. Например, для графиков по продажам можно выбрать зеленый для положительного и красный для отрицательного тренда.        </li>
+</ul>
+</li>
+<li><strong>Шрифты</strong>: Используйте стандартные шрифты (например, <strong>Calibri</strong> или <strong>Arial</strong>) и избегайте сложных шрифтов, которые могут снизить читаемость.</li>
+</ul>
+<h4 id="6_1">6. Стилизация осей и меток<a class="headerlink" href="#6_1" title="Permanent link">&para;</a></h4>
+<ul>
+<li><strong>Оси</strong>: На графике оси X и Y должны быть четкими и читабельными. Для числовых данных на оси Y используйте <strong>форматирование с разделителями тысяч</strong> (например, 1 000 вместо 1000), чтобы данные выглядели аккуратно.    </li>
+<li><strong>Метки осей</strong>: Убедитесь, что метки осей не перекрывают друг друга и не слишком мелкие. Лучше, чтобы метки располагались <strong>параллельно оси</strong> и шрифт был достаточно крупным для комфортного чтения.</li>
+</ul>
+<h3 id="93">9.3. Пример правильного оформления графика<a class="headerlink" href="#93" title="Permanent link">&para;</a></h3>
+<p>Предположим, у вас есть график, который показывает динамику продаж по месяцам. Чтобы визуализация была эффективной:</p>
+<ol>
+<li><strong>Тип графика</strong>: выбирайте <strong>линейный график</strong> или <strong>столбчатую диаграмму</strong>. Линейный график лучше подходит для отображения изменений с течением времени, а столбчатая диаграмма - для акцента на сравнении значений по периодам.  </li>
+<li><strong>Цвета</strong>: используйте <strong>единый цвет</strong> для данных одной категории. Для выделения ключевых значений (например, пиковых продаж) применяйте <strong>контрастный акцентный цвет</strong>. Избегайте слишком ярких или кислотных оттенков.  </li>
+<li><strong>Метки данных</strong>: добавьте значения прямо на диаграмму, чтобы зритель сразу видел точные цифры (например, объем продаж в каждом месяце). Это особенно важно, если ось Y не начинается с нуля.  </li>
+<li><strong>Сетка</strong>: уберите второстепенные линии сетки (особенно вертикальные), чтобы избежать визуального шума. Можно оставить горизонтальные линии - они помогают отслеживать уровень значений.  </li>
+<li><strong>Легенда</strong>: размещайте легенду вверху или справа, только если на графике более одной категории. Если все понятно без нее - лучше убрать.  </li>
+<li><strong>Заголовок</strong>: используйте <strong>ясный и информативный заголовок</strong>, который сразу объясняет суть графика (например, «Продажи по месяцам в 2024 году»).  </li>
+<li><strong>Оси</strong>: подписи и шкала на осях должны быть читаемыми. Не забывайте указывать единицы измерения, если это нужно (например, тыс. руб., шт. и т.д.).</li>
+</ol>
+<p><em>Грамотное оформление графика помогает быстро донести ключевую информацию. Избегайте избыточных декоративных элементов - таких как 3D-эффекты, градиенты и чрезмерно насыщенные цвета. Хорошая визуализация должна <strong>работать на восприятие данных</strong>, а не отвлекать от них.</em></p>
+<h1 id="excel">Создание дашборда в Excel: как связать графики и срезы на одном листе<a class="headerlink" href="#excel" title="Permanent link">&para;</a></h1>
+<p>Дашборд - это инструмент визуализации данных, который позволяет на одном экране увидеть ключевые показатели, тренды и важную информацию, без необходимости переходить по множеству страниц или отчетов. В Excel создание дашборда предполагает объединение различных графиков, таблиц и интерактивных элементов, таких как срезы и фильтры, чтобы получить единое целое, которое удобно анализировать.</p>
+<h3 id="1_2">1. Размещение графиков на одном листе<a class="headerlink" href="#1_2" title="Permanent link">&para;</a></h3>
+<p>После того как вы создали сводные таблицы и графики, аккуратно разместите их на одном листе дашборда, чтобы информация была наглядной и легко воспринимаемой. Источники данных для графиков (сводные таблицы) лучше размещать на отдельном листе. Убедитесь, что элементы на этом листе не перекрываются, иначе они могут не смогут обновляться и будут выдавать ошибку.</p>
+<ol>
+<li><strong>Откройте новый лист</strong> в Excel, который будет служить основным для вашего дашборда.    </li>
+<li><strong>Скопируйте и вставьте графики</strong> (на основе сводных таблиц) на этот лист. Расположите их таким образом, чтобы они не перекрывали друг друга, оставляя место для заголовков и других элементов.    </li>
+<li><strong>Регулируйте размеры графиков</strong> так, чтобы каждый элемент был четко виден и легко воспринимаем. Попробуйте выравнивать их по сетке для улучшения визуального восприятия.</li>
+</ol>
+<h3 id="2_2">2. Добавление срезов для фильтрации данных<a class="headerlink" href="#2_2" title="Permanent link">&para;</a></h3>
+<p>Если не создали ни одного среза, то вернитесь к пункту <a href="#42-срезы">4.2 Срезы</a></p>
+<h3 id="3_2">3. Интерактивность и настройка таймлайнов<a class="headerlink" href="#3_2" title="Permanent link">&para;</a></h3>
+<p>Чтобы улучшить интерактивность дашборда, можно добавить <strong>Таймлайн</strong> - элемент, который позволяет фильтровать данные по датам (например, по месяцам, кварталам или годам).</p>
+<ol>
+<li><strong>Добавление таймлайна</strong>:    <ul>
+<li>Выберите сводную таблицу с временным столбцом (например, дата или месяц).        </li>
+<li>Перейдите в <strong>Вставка → Таймлайн</strong>.        </li>
+<li>В окне выберите временной столбец (например, месяц или год).        </li>
+<li>Таймлайн будет добавлен на лист.        </li>
+</ul>
+</li>
+<li><strong>Настройка таймлайна</strong>:    <ul>
+<li>Настройте внешний вид таймлайна, чтобы он не перегружал экран.        </li>
+<li>Добавьте несколько таймлайнов, если нужно фильтровать данные по разным временным периодам.        </li>
+<li>Вы можете выбрать различные типы отображения (например, месяц, квартал или год) и настроить их внешний вид, чтобы пользователи могли легко выбрать нужный период.</li>
+</ul>
+</li>
+</ol>
+<h3 id="4_2">4. Итоговый просмотр и тестирование<a class="headerlink" href="#4_2" title="Permanent link">&para;</a></h3>
+<p>После того как все элементы дашборда собраны, выполните следующие действия:</p>
+<ol>
+<li><strong>Проверьте работу срезов и таймлайнов.</strong> Убедитесь, что они корректно фильтруют данные и обновляют графики.  </li>
+<li><strong>Проверьте интерактивность.</strong> Убедитесь, что все кнопки, срезы и таймлайны работают должным образом.  </li>
+<li><strong>Проверьте форматирование.</strong> Убедитесь, что все элементы дашборда визуально согласованы, данные легко воспринимаются, а дизайн не перегружен.  </li>
+<li><strong>Проверьте название дашборда.</strong> Убедитесь, что оно чётко отражает содержание и цель дашборда.</li>
+</ol>
+<p><a href="#оглавление">Оглавление</a></p>
+
+
+
+
+
+
+
+  
+    
+  
+  
+    
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Последнее обновление">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 декабря 2025 г. 11:54:19 UTC">25 декабря 2025 г.</span>
+  </span>
+
+    
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Дата создания">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M14.47 15.08 11 13V7h1.5v5.25l3.08 1.83c-.41.28-.79.62-1.11 1m-1.39 4.84c-.36.05-.71.08-1.08.08-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8c0 .37-.03.72-.08 1.08.69.1 1.33.32 1.92.64.1-.56.16-1.13.16-1.72 0-5.5-4.5-10-10-10S2 6.5 2 12s4.47 10 10 10c.59 0 1.16-.06 1.72-.16-.32-.59-.54-1.23-.64-1.92M18 15v3h-3v2h3v3h2v-3h3v-2h-3v-3z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="25 декабря 2025 г. 11:54:19 UTC">25 декабря 2025 г.</span>
+  </span>
+
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  К началу
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/TheDataWanderer" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/nefatov/" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://t.me/@maksim_flow" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.expand", "navigation.sections", "navigation.tabs", "navigation.top", "toc.integrate", "search.highlight", "search.suggest", "content.code.copy", "content.tabs.link"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
