@@ -1,6 +1,6 @@
 site_name: 'Data Engineering Knowledge Base'
 site_description: 'Личная база знаний и проекты Data Engineer'
-site_author: 'Твоё Имя'
+site_author: 'Максим'
 site_url: 'https://dehandbook.ru/'
 
 # 📘 Тема
@@ -37,27 +37,24 @@ nav:
   - Проекты: projects.md
   - База знаний:
       - Python:
-          - Основы: knowledge/python/basics.md
-          - Pandas: knowledge/python/pandas.md
-          - PySpark: knowledge/python/pyspark.md
+          - Основы: knowleddge/python/basics.md
+          - Pandas: knowleddge/python/pandas.md
+          - Советы: knowleddge/python/tips.md
       - SQL:
-          - Основы: knowledge/sql/basics.md
-          - Оптимизация: knowledge/sql/optimization.md
+          - Основы: notes/sql.md
       - Airflow:
-          - DAG-и: knowledge/airflow/dags.md
-          - Практики: knowledge/airflow/practices.md
-      - Инфраструктура:
-          - Docker: knowledge/devops/docker.md
-          - CI/CD: knowledge/devops/cicd.md
+          - Заметки: notes/airflow.md
   - Курсы и обучение:
       - Python курс: courses/python_course.md
       - Stepik ML: courses/stepik.md
       - LeetCode заметки: courses/leetcode_notes.md
   - Заметки:
-      - Разное: notes/airflow.md
-      - Архитектура данных: notes/architecture.md
+      - Python: notes/python.md
+      - Airflow: notes/airflow.md
+      - SQL: notes/sql.md
   - Развитие: progress.md
-  - Контакты: contacts.md
+  - Медиа: contacts.md
+  - Полезные ресурсы: useful_resources.md
 
 # 🧩 Расширения Markdown
 markdown_extensions:
@@ -76,7 +73,8 @@ markdown_extensions:
   - pymdownx.magiclink
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets
+  - pymdownx.snippets:
+      base_path: docs
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
@@ -100,4 +98,6 @@ extra:
       link: https://github.com/TheDataWanderer
     - icon: fontawesome/brands/linkedin
       link: https://linkedin.com/in/nefatov/
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/@maksim_flow
   generator: false

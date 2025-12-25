@@ -60,6 +60,6 @@
 
 Если тебе откликнулся мой подход — буду рад связаться:
 
-* GitHub: [ссылка]
-* Telegram / канал: [ссылка]
-* LinkedIn: [ссылка]
+* [GitHub](https://github.com/TheDataWanderer)
+* [Telegram](https://t.me/@maksim_flow)
+* [LinkedIn](https://linkedin.com/in/nefatov/)

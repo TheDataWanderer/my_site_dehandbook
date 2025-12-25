@@ -1,0 +1,3 @@
+## Медиа
+
+[Мой телеграм канал](https://t.me/data_engineer_journal)
