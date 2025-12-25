@@ -57,6 +57,10 @@ nav:
       - Заметки: knowledge/notes/index.md
   - Мои курсы:
       - Обзор: courses/index.md
+      - Excel для менеджеров:
+          - Обзор: excel/index.md
+      - PostgreSQL:
+          - Обзор: postgresql/index.md
   - Медиа: media.md
   - Полезные ресурсы: resources.md
 

@@ -5,3 +5,21 @@
 которые я использую в работе Data Engineer.
 
 База знаний постоянно дополняется и уточняется по мере обучения и практики.
+# База знаний по Data Engineering
+
+Этот раздел - моя личная **инженерная база знаний**.  
+Здесь собраны структурированные заметки, конспекты и практические выводы,
+которые я использую в работе Data Engineer.
+
+База знаний постоянно дополняется и уточняется по мере обучения и практики.
+
+## Основные разделы
+
+- [Apache Airflow](airflow/index.md)
+- [DWH (Data Warehouse)](dwh/index.md)
+- [Git](git/index.md)
+- [Linux](linux/index.md)
+- [PostgreSQL](postgresql/index.md)
+- [Python](python/index.md)
+- [Obsidian](obsidian/index.md)
+- [Общие заметки](notes/index.md)
