@@ -6,6 +6,7 @@ site_url: 'https://dehandbook.ru/'
 # 📘 Тема
 theme:
   name: 'material'
+  favicon: assets/images/favicon.png
   language: 'ru'
   features:
     - navigation.expand
