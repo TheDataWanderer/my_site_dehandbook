@@ -59,8 +59,14 @@ nav:
       - Обзор: courses/index.md
       - Excel для менеджеров:
           - Обзор: courses/excel/index.md
+          - Лекции: courses/excel/lectures/index.md
+          - Домашние задания: courses/excel/homework/index.md
+          - Ресурсы: courses/excel/resources/index.md
       - PostgreSQL:
           - Обзор: courses/postgresql/index.md
+          - Лекции: courses/postgresql/lectures/index.md
+          - Домашние задания: courses/postgresql/homework/index.md
+          - Ресурсы: courses/postgresql/resources/index.md
   - Медиа: media.md
   - Полезные ресурсы: resources.md
 
