@@ -44,9 +44,6 @@ nav:
           - Основы: knowledge/python/index.md
       - PostgreSQL:
           - Обзор: knowledge/postgresql/index.md
-          - Основы: knowledge/postgresql/basics.md
-          - Оптимизация: knowledge/postgresql/optimization.md
-          - Оконные функции: knowledge/postgresql/window_functions.md
       - Airflow:
           - Обзор: knowledge/airflow/index.md
       - DWH:
@@ -60,8 +57,6 @@ nav:
       - Заметки: knowledge/notes/index.md
   - Мои курсы:
       - Обзор: courses/index.md
-      - Excel для менеджеров: courses/excel/index.md
-      - PostgreSQL: courses/postgresql/index.md
   - Медиа: media.md
   - Полезные ресурсы: resources.md
 
