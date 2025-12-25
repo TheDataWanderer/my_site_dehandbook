@@ -1,1 +1,1 @@
-[Мой телеграм канал](https://t.me/data_engineer_journal)
+[Мой телеграм канал](https://t.me/+3Hq2ER0DZAc1OThi)
