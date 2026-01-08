@@ -70,7 +70,14 @@ nav:
               - Лекция 3: courses/postgresql/lectures/lecture_03.md
               - Лекция 4: courses/postgresql/lectures/lecture_04.md
               - Лекция 5: courses/postgresql/lectures/lecture_05.md
-          - Домашние задания: courses/postgresql/homework/index.md
+          - Домашние задания:
+              - Задание 1: courses/postgresql/homework/hw_01.md
+              - Задание 2: courses/postgresql/homework/hw_02.md
+              - Задание 3: courses/postgresql/homework/hw_03.md
+              - Задание 4: courses/postgresql/homework/hw_04.md
+              - Задание 5: courses/postgresql/homework/hw_05.md
+              - Проверочная работа: courses/postgresql/homework/control_work.md
+              - Экзамен: courses/postgresql/homework/examination_work.md
           - Ресурсы: courses/postgresql/resources/index.md
   - Медиа: media.md
   - Полезные ресурсы: resources.md
