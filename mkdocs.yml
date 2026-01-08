@@ -63,7 +63,7 @@ nav:
           - Домашние задания: courses/excel/homework/index.md
           - Ресурсы: courses/excel/resources/index.md
       - PostgreSQL:
-          - Обзор: courses/postgresql/index.md: 
+          - Обзор: courses/postgresql/index.md
           - Лекции:
               - Лекция 1: courses/postgresql/lectures/lecture_01.md
               - Лекция 2: courses/postgresql/lectures/lecture_02.md
