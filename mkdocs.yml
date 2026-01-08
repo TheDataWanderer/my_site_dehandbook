@@ -65,9 +65,11 @@ nav:
       - PostgreSQL:
           - Обзор: courses/postgresql/index.md
           - Лекции: courses/postgresql/lectures/index.md
-            - Лекция 1: courses/excel/lectures/lecture-01.md
-            - Лекция 2: courses/excel/lectures/lecture-02.md
-            - Лекция 3: courses/excel/lectures/lecture-03.md
+          - Лекция 1: courses/excel/lectures/lecture-01.md
+          - Лекция 2: courses/excel/lectures/lecture-02.md
+          - Лекция 3: courses/excel/lectures/lecture-03.md
+          - Лекция 4: courses/excel/lectures/lecture-04.md
+          - Лекция 5: courses/excel/lectures/lecture-05.md
           - Домашние задания: courses/postgresql/homework/index.md
           - Ресурсы: courses/postgresql/resources/index.md
   - Медиа: media.md
