@@ -3,7 +3,7 @@
 Это мой личный knowledge hub по **Data Engineering**.
 
 Здесь вы найдете:
-- заметки по Python, SQL, Airflow;  
+- заметки по Python, SQL, Airflow и другим инструментам;  
 - конспекты курсов;  
 - мои проекты и эксперименты.
 
