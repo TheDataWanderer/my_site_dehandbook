@@ -193,9 +193,7 @@ CASE
     ELSE 'нет'
 END
 ```
-
 или
-
 ```sql
 CASE
     WHEN condition THEN 1
