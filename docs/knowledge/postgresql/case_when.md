@@ -23,7 +23,7 @@ CASE <expression>
     ...
     ELSE <default_result>
 END
-````
+```
 ### Пример: 
 ```sql
 CASE status
