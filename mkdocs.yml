@@ -49,7 +49,7 @@ nav:
       - Linux:
           - Обзор: knowledge/linux/index.md
       - PostgreSQL:
-          - Обзор: knowledge/postgresql/index.md
+          - Условное выражение CASE: knowledge/postgresql/case_when.md
       - Python:
           - Основы: knowledge/python/index.md
       - Obsidian:
