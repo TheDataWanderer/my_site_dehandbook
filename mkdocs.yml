@@ -118,6 +118,9 @@ plugins:
       enable_creation_date: true
   - awesome-pages
 
+hooks:
+  - hooks.py
+
 # 📄 Дополнительно
 extra:
   social:
