@@ -121,6 +121,9 @@ plugins:
 hooks:
   - hooks.py
 
+exclude_docs: |
+  _meta/updates.md
+
 # 📄 Дополнительно
 extra:
   social:
