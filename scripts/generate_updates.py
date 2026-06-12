@@ -9,7 +9,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT / "docs"
 UPDATES_FILE = DOCS_DIR / "_meta" / "updates.md"
-MAX_ITEMS = 12
+MAX_ITEMS = 5
 
 
 def clean_title(title: str) -> str:
