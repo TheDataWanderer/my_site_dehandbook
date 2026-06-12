@@ -62,5 +62,5 @@
 Если тебе откликнулся мой подход - буду рад связаться:
 
 * [GitHub](https://github.com/TheDataWanderer)
-* [Telegram](https://t.me/@maksim_flow)
+* [Telegram](https://t.me/maksim_flow)
 * [LinkedIn](https://linkedin.com/in/nefatov/)
